@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 type NavLink = {
@@ -21,7 +22,7 @@ export default function NavMenu() {
     <nav
       className={
         isOpen
-          ? "bg-green-400 absolute flex flex-col right-0 top-0 p-12 h-screen w-2/3"
+          ? " bg-slate-200 absolute flex flex-col right-0 top-0 p-12 h-screen w-2/3"
           : ""
       }
     >
@@ -31,12 +32,16 @@ export default function NavMenu() {
         }`}
       >
         {NAVLINKS.map((link) => (
-          <li key={link.link}>{link.name}</li>
+          <li key={link.link}>
+            <Link href={link.link} onClick={() => setIsOpen(false)}>
+              {link.name}
+            </Link>
+          </li>
         ))}
       </ul>
       <button onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? (
-          <X className="md:hidden absolute top-0 right-0" size={36} />
+          <X className="md:hidden absolute top-2 right-2" size={36} />
         ) : (
           <Menu className="md:hidden" size={36} />
         )}
