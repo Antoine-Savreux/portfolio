@@ -1,5 +1,15 @@
-import Image from "next/image";
-
-export default function Home() {
-  return <div>hello world</div>;
+export default function HomePage() {
+  return (
+    <div>
+      {/* Important */}
+      {/* Titre */}
+      {/* Contenu */}
+      {/* Bouton */}
+      {/* Bouton */}
+      {/* Section a propos */}
+      {/* Titre */}
+      {/* Texte intro + bouton */}
+      {/* Caroussel de cards projets */}
+    </div>
+  );
 }
