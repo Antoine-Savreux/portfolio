@@ -22,7 +22,7 @@ export default function NavMenu() {
     <nav
       className={
         isOpen
-          ? " bg-slate-200 absolute flex flex-col right-0 top-0 p-12 h-screen w-2/3"
+          ? " bg-slate-200 absolute flex flex-col right-0 top-0 p-12 h-screen w-2/3 bg-primary"
           : ""
       }
     >
