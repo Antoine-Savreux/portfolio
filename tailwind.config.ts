@@ -18,6 +18,7 @@ const config: Config = {
       primary: "#FF705D",
       secondary: "#231E2E",
       lightText: "#FFFFFF",
+      darkText: "#231E2E",
     },
   },
   plugins: [],
