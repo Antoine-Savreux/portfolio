@@ -3,6 +3,8 @@ import ImportantText from "@/components/ImportantText";
 import TitleTextSection from "@/components/TitleTextSection";
 import Title from "@/components/Title";
 import About from "@/components/About";
+import IntroTextButton from "@/components/IntroTextButton";
+import Carousel from "@/components/Carousel";
 
 export default function HomePage() {
   return (
@@ -23,8 +25,11 @@ export default function HomePage() {
       <Title title="A propos" />
       <About />
       {/* Titre */}
+      <Title title="Mes projets" />
       {/* Texte intro + bouton */}
+      <IntroTextButton text="Les projets sur lesquels j'ai pu travailler :" />
       {/* Caroussel de cards projets */}
+      <Carousel />
     </div>
   );
 }
