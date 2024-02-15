@@ -29,13 +29,14 @@ const projectData = [
   {
     id: 4,
     name: "website2",
-    description: "a fully responsive website 2",
+    description:
+      "a fully responsive website 2 a fully responsive website 2 a fully responsive website 2 a fully responsive website 2 a fully responsive website 2 a fully responsive website 2 ",
     image: websiteImage,
   },
 ];
 
 export default function Carousel() {
-  const [currentIndex, setCurrentIndex] = useState(3);
+  const [currentIndex, setCurrentIndex] = useState(1);
 
   const filteredProject = projectData.filter(
     (project) => project.id === currentIndex
