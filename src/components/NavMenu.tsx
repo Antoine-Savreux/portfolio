@@ -2,7 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 type NavLink = {
   name: string;
@@ -18,11 +18,43 @@ const NAVLINKS: NavLink[] = [
 
 export default function NavMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutsideMouse(event: MouseEvent) {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target as Node) &&
+        isOpen
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    function handleClickOutsideTouch(event: TouchEvent) {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target as Node) &&
+        isOpen
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutsideMouse);
+    document.addEventListener("touchstart", handleClickOutsideTouch);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutsideMouse);
+      document.removeEventListener("touchstart", handleClickOutsideTouch);
+    };
+  }, [isOpen]);
   return (
     <nav
+      ref={navRef}
       className={
         isOpen
-          ? " bg-slate-200 absolute flex flex-col right-0 top-0 p-12 h-screen w-2/3 bg-primary"
+          ? "absolute flex flex-col right-0 top-0 pt-24 h-screen w-2/3 bg-bgNavMenu"
           : ""
       }
     >
@@ -33,7 +65,11 @@ export default function NavMenu() {
       >
         {NAVLINKS.map((link) => (
           <li key={link.link}>
-            <Link href={link.link} onClick={() => setIsOpen(false)}>
+            <Link
+              className="text-secondary text-2xl font-semibold"
+              href={link.link}
+              onClick={() => setIsOpen(false)}
+            >
               {link.name}
             </Link>
           </li>
@@ -41,9 +77,12 @@ export default function NavMenu() {
       </ul>
       <button onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? (
-          <X className="md:hidden absolute top-2 right-2" size={36} />
+          <X
+            className="md:hidden absolute top-2 right-2 text-secondary"
+            size={36}
+          />
         ) : (
-          <Menu className="md:hidden" size={36} />
+          <Menu className="md:hidden text-secondary" size={36} />
         )}
       </button>
     </nav>

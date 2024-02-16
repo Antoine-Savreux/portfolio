@@ -7,7 +7,9 @@ export default function Footer() {
         <Github className=" text-primary" size={28} />
         <Linkedin className="text-primary" size={28} />
       </div>
-      <p className="text-primary">copyright 2024</p>
+      <p className="text-primary text-xs">
+        Designed and built by Antoine Savreux
+      </p>
     </footer>
   );
 }
