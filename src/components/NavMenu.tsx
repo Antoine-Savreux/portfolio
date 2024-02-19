@@ -54,7 +54,7 @@ export default function NavMenu() {
       ref={navRef}
       className={
         isOpen
-          ? "absolute flex flex-col right-0 top-0 pt-24 h-screen w-2/3 bg-bgNavMenu"
+          ? "absolute flex flex-col right-0 top-0 pt-24 h-screen w-2/3 bg-bgNavMenu z-50"
           : ""
       }
     >
