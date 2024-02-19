@@ -40,6 +40,7 @@ export default function Carousel() {
           image={project.image}
           name={project.name}
           description={project.description}
+          url={project.url}
           setCurrentIndex={setCurrentIndex}
         />
       ))}
