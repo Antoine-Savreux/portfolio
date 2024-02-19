@@ -8,18 +8,21 @@ export const projectData = [
     name: "website",
     description: "a fully responsive website",
     image: websiteImage,
+    url: "/portfolio",
   },
   {
     id: 2,
     name: "weatherApp",
     description: "weather app",
     image: weatherAppImage,
+    url: "/portfolio",
   },
   {
     id: 3,
     name: "forum",
     description: "my personal view of forum",
     image: forumImage,
+    url: "/portfolio",
   },
   {
     id: 4,
@@ -27,5 +30,6 @@ export const projectData = [
     description:
       "a fully responsive website 2 a fully responsive website 2 a fully responsive website 2 a fully responsive website 2 a fully responsive website 2 a fully responsive website 2 ",
     image: websiteImage,
+    url: "/portfolio",
   },
 ];
