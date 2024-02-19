@@ -1,6 +1,7 @@
 import ProjectCard from "@/components/ProjectCard";
 import { projectData } from "@/utils/projectData";
 import Title from "@/components/Title";
+import ButtonWithLink from "@/components/ButtonWithLink";
 
 export default function WorkPage() {
   return (
@@ -10,7 +11,7 @@ export default function WorkPage() {
         Retrouvez les différents projets sur lesquels je travaille ou j&apos;ai
         pu travaillé :
       </p>
-      <div className="flex flex-col items-center space-y-8">
+      <section className="flex flex-col items-center space-y-8">
         {projectData.map((project) => (
           <ProjectCard
             key={project.id}
@@ -20,7 +21,8 @@ export default function WorkPage() {
             url={project.url}
           />
         ))}
-      </div>
+      </section>
+      <ButtonWithLink title="Collaborer !" href="/contact" type="contact" />
     </main>
   );
 }
