@@ -5,7 +5,6 @@ import Title from "@/components/Title";
 import About from "@/components/About";
 import IntroTextButton from "@/components/IntroTextButton";
 import Carousel from "@/components/Carousel";
-import { Send } from "lucide-react";
 
 export default function HomePage() {
   return (
