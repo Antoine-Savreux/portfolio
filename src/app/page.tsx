@@ -5,6 +5,7 @@ import Title from "@/components/Title";
 import About from "@/components/About";
 import IntroTextButton from "@/components/IntroTextButton";
 import Carousel from "@/components/Carousel";
+import DownloadButton from "@/components/DownloadButton";
 
 export default function HomePage() {
   return (
@@ -20,7 +21,12 @@ export default function HomePage() {
       {/* Bouton */}
       <ButtonWithLink title="Contact" href="/contact" type="contact" />
       {/* Bouton */}
-      <ButtonWithLink title="Télécharger mon CV" href="/" type="download" />
+      <DownloadButton
+        text="Télécharger mon CV"
+        type="download"
+        filePath="/images/forum.jpg"
+        fileName="forum.jpg"
+      />
       {/* Section a propos */}
       <Title title="A propos" />
       <About />

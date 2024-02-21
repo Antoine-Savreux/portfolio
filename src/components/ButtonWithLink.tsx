@@ -17,6 +17,7 @@ export default function ButtonWithLink({
   type: keyof typeof buttonIcons;
 }) {
   const icon = buttonIcons[type];
+
   return (
     <Link href={href}>
       <button className="bg-primary px-6 py-3 text-xl font-semibold text-lightText rounded-full flex gap-2 items-center">
