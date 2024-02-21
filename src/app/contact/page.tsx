@@ -1,16 +1,28 @@
 "use client";
 
 import Title from "@/components/Title";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [formValidate, setFormValidate] = useState(false);
+
+  const formValidation = () => {
+    if (name.trim() != "" && email.trim() != "" && message.trim() != "") {
+      setFormValidate(true);
+    } else {
+      setFormValidate(false);
+    }
+  };
+
+  useEffect(() => {
+    formValidation();
+  }, [name, email, message]);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-
     try {
       const response = await fetch("/api/sendMessage", {
         method: "POST",
@@ -70,7 +82,10 @@ export default function ContactPage() {
             onChange={(e) => setMessage(e.target.value)}
           />
         </label>
-        <button className="bg-primary px-6 py-3 text-xl font-semibold text-lightText rounded-full justify-center mt-8">
+        <button
+          disabled={!formValidate}
+          className="bg-primary px-6 py-3 text-xl font-semibold text-lightText rounded-full justify-center mt-8 disabled:opacity-50"
+        >
           Envoyer
         </button>
       </form>
