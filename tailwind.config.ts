@@ -23,6 +23,7 @@ const config: Config = {
       borderCard: "#f1f5f9",
       textLightCard: "#6b7280",
       bgNavMenu: "#ffffff",
+      bgAppLight: "#fafafa",
     },
   },
   plugins: [],
