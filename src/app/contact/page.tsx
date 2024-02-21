@@ -2,12 +2,16 @@
 
 import Title from "@/components/Title";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [formValidate, setFormValidate] = useState(false);
+  const [validationMessage, setValidationMessage] = useState("");
+
+  const router = useRouter();
 
   const formValidation = () => {
     if (name.trim() != "" && email.trim() != "" && message.trim() != "") {
@@ -29,14 +33,16 @@ export default function ContactPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
       });
-      if (!response.ok) {
-        throw new Error("Erreur lors de l'envoi de l'email");
+      if (response.ok) {
+        setValidationMessage(
+          "Super ! Votre message a été envoyé avec succès. Vous allez être redirigé dans un instant..."
+        );
+        setTimeout(() => router.push("/"), 4000);
       }
-
-      const data = await response.json();
-      console.log(data);
     } catch (error) {
-      console.error(error);
+      setValidationMessage(
+        "Mince... Quelque chose s'est mal passé. Le message n'a pas été distribué. Réessayez plus tard."
+      );
     }
   };
   return (
@@ -88,6 +94,7 @@ export default function ContactPage() {
         >
           Envoyer
         </button>
+        <span className="text-primary text-lg">{validationMessage}</span>
       </form>
     </main>
   );
