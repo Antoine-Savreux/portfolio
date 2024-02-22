@@ -20,7 +20,7 @@ const config: Config = {
       lightText: "#FFFFFF",
       darkText: "#231E2E",
       bgCard: "#f8fafc",
-      borderCard: "#f1f5f9",
+      borderCard: "#f4f4f5",
       textLightCard: "#6b7280",
       bgNavMenu: "#ffffff",
     },
