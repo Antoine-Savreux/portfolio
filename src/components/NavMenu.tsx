@@ -54,12 +54,12 @@ export default function NavMenu() {
       ref={navRef}
       className={
         isOpen
-          ? "absolute flex flex-col right-0 top-0 pt-24 h-screen w-2/3 bg-bgNavMenu z-50"
+          ? "absolute flex flex-col right-0 top-0 pt-24 h-screen w-2/3 md:w-1/3 bg-bgNavMenu z-50"
           : ""
       }
     >
       <ul
-        className={`md:flex ${
+        className={` ${
           isOpen ? "flex flex-col items-center space-y-5" : "hidden"
         }`}
       >
@@ -77,12 +77,9 @@ export default function NavMenu() {
       </ul>
       <button onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? (
-          <X
-            className="md:hidden absolute top-2 right-2 text-secondary"
-            size={36}
-          />
+          <X className="absolute top-2 right-2 text-secondary" size={36} />
         ) : (
-          <Menu className="md:hidden text-secondary" size={36} />
+          <Menu className="text-secondary" size={36} />
         )}
       </button>
     </nav>
