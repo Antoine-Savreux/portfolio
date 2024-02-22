@@ -1,35 +1,42 @@
 import forumImage from "@/../public/images/forum.jpg";
 import weatherAppImage from "@/../public/images/weather-app.jpg";
 import websiteImage from "@/../public/images/website.jpg";
+import portfolioImage from "../../public/images/portfolio-mobile.png";
+import weatherShieldImage from "../../public/images/wheathershield-mobile.png";
+import tvShowAdviserImage from "../../public/images/tvshowadviser.png";
+import opotagerFrontImage from "../../public/images/opotager-front.png";
 
 export const projectData = [
   {
     id: 1,
-    name: "website",
-    description: "a fully responsive website",
-    image: websiteImage,
+    name: "Portfolio",
+    description:
+      "Première version de mon portfolio. Réalisée avec Next 14 et tailwind. J'ai voulu au maximum n'utiliser que des composants que j'avais créé au préalable. Pas de bibliothèques d'UI. Pur produit Normand garanti !",
+    image: portfolioImage,
     url: "/portfolio",
   },
   {
     id: 2,
-    name: "weatherApp",
-    description: "weather app",
-    image: weatherAppImage,
-    url: "/portfolio",
+    name: "WeatherShield",
+    description:
+      "Une application météo que j'ai commencé à réaliser avec Next 14 et grâce aux données de WeatherAPI. L'UI est construite grâce ) la bibliothèque ShadCN",
+    image: weatherShieldImage,
+    url: "/weather-shield",
   },
   {
     id: 3,
-    name: "forum",
-    description: "my personal view of forum",
-    image: forumImage,
-    url: "/portfolio",
+    name: "Keskonregarde?",
+    description:
+      "Une application que j'ai eu l'occasion de créer dans le cadre de mon apprentissage de React et Redux dans le cours de Robin Lebhar sur Udemy",
+    image: tvShowAdviserImage,
+    url: "/react-tv-show-adviser",
   },
   {
     id: 4,
-    name: "website2",
+    name: "O'potager",
     description:
-      "a fully responsive website 2 a fully responsive website 2 a fully responsive website 2 a fully responsive website 2 a fully responsive website 2 a fully responsive website 2 ",
-    image: websiteImage,
-    url: "/portfolio",
+      "Une application que j'ai crée avec mon équipe d'apothéose au terme de ma formation chez O'clock. La partie front-end a été réalisée avec React + Tailwind. L'API a été crée grâce à Symfony.",
+    image: opotagerFrontImage,
+    url: "/apo-front",
   },
 ];
