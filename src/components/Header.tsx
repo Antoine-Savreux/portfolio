@@ -4,7 +4,7 @@ import SwitchTheme from "./SwitchTheme";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between py-3 px-6 shadow-md bg-bgNavMenu">
+    <header className="flex items-center justify-between py-3 px-4 shadow-md bg-bgNavMenu">
       {/* Logo */}
       <Logo />
       <div className="flex space-x-2">
