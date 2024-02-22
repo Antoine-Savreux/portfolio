@@ -7,7 +7,7 @@ export default function Header() {
     <header className="flex items-center justify-between py-3 px-4 shadow-md bg-bgNavMenu">
       {/* Logo */}
       <Logo />
-      <div className="flex space-x-2">
+      <div className="flex space-x-2 lg:flex lg:flex-row-reverse lg:gap-10">
         {/* ThemeSwitch */}
         <SwitchTheme />
         {/* NavMenu */}

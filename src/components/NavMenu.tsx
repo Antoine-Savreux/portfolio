@@ -55,18 +55,20 @@ export default function NavMenu() {
       className={
         isOpen
           ? "absolute flex flex-col right-0 top-0 pt-24 h-screen w-2/3 md:w-1/3 bg-bgNavMenu z-50"
-          : ""
+          : "lg:flex"
       }
     >
       <ul
         className={` ${
-          isOpen ? "flex flex-col items-center space-y-5" : "hidden"
+          isOpen
+            ? "flex flex-col items-center space-y-5"
+            : "hidden lg:flex lg:space-x-6"
         }`}
       >
         {NAVLINKS.map((link) => (
           <li key={link.link}>
             <Link
-              className="text-secondary text-2xl font-semibold"
+              className="text-secondary text-2xl font-semibold lg:text-3xl lg:font-medium lg:hover:text-primary"
               href={link.link}
               onClick={() => setIsOpen(false)}
             >
@@ -77,9 +79,12 @@ export default function NavMenu() {
       </ul>
       <button onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? (
-          <X className="absolute top-2 right-2 text-secondary" size={36} />
+          <X
+            className="absolute top-2 right-2 text-secondary lg:hidden"
+            size={36}
+          />
         ) : (
-          <Menu className="text-secondary" size={36} />
+          <Menu className="text-secondary lg:hidden" size={36} />
         )}
       </button>
     </nav>
