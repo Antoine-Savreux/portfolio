@@ -11,7 +11,7 @@ export default function WorkPage() {
         Retrouvez les différents projets sur lesquels je travaille ou j&apos;ai
         pu travaillé :
       </p>
-      <section className="flex flex-col items-center space-y-8">
+      <section className="flex flex-col items-center space-y-4">
         {projectData.map((project) => (
           <ProjectCard
             key={project.id}
