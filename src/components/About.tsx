@@ -19,84 +19,84 @@ import reactIcon from "@/../public/images/react.svg";
 import tsIcon from "@/../public/images/ts.svg";
 import Image from "next/image";
 
+const personalInfoData = [
+  {
+    icon: <User2 size={20} className="text-primary" />,
+    text: "Antoine Savreux",
+  },
+  {
+    icon: <PhoneCall size={20} className="text-primary" />,
+    text: "06 66 98 79 10",
+  },
+  {
+    icon: <MailIcon size={20} className="text-primary" />,
+    text: "antoine.savreux06@gmail.com",
+  },
+  {
+    icon: <Calendar size={20} className="text-primary" />,
+    text: "12 juin 1997",
+  },
+  {
+    icon: <HomeIcon size={20} className="text-primary" />,
+    text: "Rouen, Normandie",
+  },
+];
+
+const qualificationData = [
+  {
+    name: "Titre pro. DWWM",
+    school: "O'clock",
+  },
+  {
+    name: "Maitriser Nextjs 14",
+    school: "Udemy",
+  },
+  {
+    name: "React JS + Redux",
+    school: "Udemy",
+  },
+  {
+    name: "NodeJS: Express",
+    school: "Udemy",
+  },
+];
+
+const skillData = [
+  {
+    icon: cssIcon,
+    name: "CSS",
+  },
+  {
+    icon: htmlIcon,
+    name: "HTML",
+  },
+  {
+    icon: jsIcon,
+    name: "Javascript",
+  },
+  {
+    icon: mysqlIcon,
+    name: "MySQL",
+  },
+  {
+    icon: nextIcon,
+    name: "NextJS",
+  },
+  {
+    icon: phpIcon,
+    name: "PHP",
+  },
+  {
+    icon: reactIcon,
+    name: "React",
+  },
+  {
+    icon: tsIcon,
+    name: "Typescript",
+  },
+];
+
 export default function About() {
-  const personalInfoData = [
-    {
-      icon: <User2 size={20} className="text-primary" />,
-      text: "Antoine Savreux",
-    },
-    {
-      icon: <PhoneCall size={20} className="text-primary" />,
-      text: "06 66 98 79 10",
-    },
-    {
-      icon: <MailIcon size={20} className="text-primary" />,
-      text: "antoine.savreux06@gmail.com",
-    },
-    {
-      icon: <Calendar size={20} className="text-primary" />,
-      text: "12 juin 1997",
-    },
-    {
-      icon: <HomeIcon size={20} className="text-primary" />,
-      text: "Rouen, Normandie",
-    },
-  ];
-
-  const qualificationData = [
-    {
-      name: "Titre pro. DWWM",
-      school: "O'clock",
-    },
-    {
-      name: "Maitriser Nextjs 14",
-      school: "Udemy",
-    },
-    {
-      name: "React JS + Redux",
-      school: "Udemy",
-    },
-    {
-      name: "NodeJS: Express",
-      school: "Udemy",
-    },
-  ];
-
-  const skillData = [
-    {
-      icon: cssIcon,
-      name: "CSS",
-    },
-    {
-      icon: htmlIcon,
-      name: "HTML",
-    },
-    {
-      icon: jsIcon,
-      name: "Javascript",
-    },
-    {
-      icon: mysqlIcon,
-      name: "MySQL",
-    },
-    {
-      icon: nextIcon,
-      name: "NextJS",
-    },
-    {
-      icon: phpIcon,
-      name: "PHP",
-    },
-    {
-      icon: reactIcon,
-      name: "React",
-    },
-    {
-      icon: tsIcon,
-      name: "Typescript",
-    },
-  ];
-
   const [isClicked, setIsClicked] = useState(1);
 
   const onClickButton = (e: any) => {

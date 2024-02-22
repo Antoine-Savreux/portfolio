@@ -6,7 +6,7 @@ export default function IntroTextButton({ text }: { text: string }) {
       <p className="text-secondary">{text}</p>
       <ButtonWithLink
         title="Voir tous mes projets"
-        href="/projects"
+        href="/work"
         type="projects"
       />
     </div>
