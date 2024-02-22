@@ -1,6 +1,3 @@
-import forumImage from "@/../public/images/forum.jpg";
-import weatherAppImage from "@/../public/images/weather-app.jpg";
-import websiteImage from "@/../public/images/website.jpg";
 import portfolioImage from "../../public/images/portfolio-mobile.png";
 import weatherShieldImage from "../../public/images/wheathershield-mobile.png";
 import tvShowAdviserImage from "../../public/images/tvshowadviser.png";
