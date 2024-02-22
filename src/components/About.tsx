@@ -14,7 +14,7 @@ import htmlIcon from "@/../public/images/html.svg";
 import jsIcon from "@/../public/images/js.svg";
 import mysqlIcon from "@/../public/images/mysql.svg";
 import nextIcon from "@/../public/images/next.svg";
-import phpIcon from "@/../public/images/html.svg";
+import phpIcon from "@/../public/images/php.svg";
 import reactIcon from "@/../public/images/react.svg";
 import tsIcon from "@/../public/images/ts.svg";
 import Image from "next/image";
