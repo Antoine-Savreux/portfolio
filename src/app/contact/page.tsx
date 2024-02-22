@@ -46,7 +46,7 @@ export default function ContactPage() {
     }
   };
   return (
-    <main className="min-h-full flex flex-col p-8 gap-8">
+    <main className="min-h-full flex flex-col p-4 gap-8">
       <Title title="Me contacter" />
       <section className="min-w-full">
         <form className="flex flex-col gap-2" onSubmit={handleSubmit}>

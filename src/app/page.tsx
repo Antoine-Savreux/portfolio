@@ -9,7 +9,7 @@ import DownloadButton from "@/components/DownloadButton";
 
 export default function HomePage() {
   return (
-    <div className="min-h-full flex flex-col items-center p-8 space-y-8">
+    <div className="min-h-full flex flex-col items-center p-4 space-y-8">
       {/* Important */}
       <ImportantText text="Développeur web" />
       {/* Titre */}

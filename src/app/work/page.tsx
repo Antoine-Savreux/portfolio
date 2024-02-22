@@ -5,7 +5,7 @@ import ButtonWithLink from "@/components/ButtonWithLink";
 
 export default function WorkPage() {
   return (
-    <main className="min-h-full flex flex-col items-center p-8 space-y-8">
+    <main className="min-h-full flex flex-col items-center p-4 space-y-8">
       <Title title="Mes projets" />
       <p className="text-base text-justify font-medium text-secondary">
         Retrouvez les différents projets sur lesquels je travaille ou j&apos;ai

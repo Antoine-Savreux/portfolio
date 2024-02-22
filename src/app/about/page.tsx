@@ -7,7 +7,7 @@ import { log } from "console";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-full flex flex-col items-center p-8 space-y-8">
+    <main className="min-h-full flex flex-col items-center p-4 space-y-8">
       <Title title="Mon parcours" />
       <div className="relative">
         <Image
