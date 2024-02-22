@@ -49,7 +49,15 @@ export default function About() {
       school: "O'clock",
     },
     {
-      name: " Maitriser Nextjs 14",
+      name: "Maitriser Nextjs 14",
+      school: "Udemy",
+    },
+    {
+      name: "React JS + Redux",
+      school: "Udemy",
+    },
+    {
+      name: "NodeJS: Express",
       school: "Udemy",
     },
   ];
