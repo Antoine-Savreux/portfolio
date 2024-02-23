@@ -20,7 +20,7 @@ export default function ButtonWithLink({
 
   return (
     <Link href={href}>
-      <button className="bg-primary px-6 py-3 text-xl font-semibold text-lightText rounded-full flex gap-2 items-center">
+      <button className="bg-primary px-6 py-3 text-xl font-semibold text-lightText rounded-full flex gap-2 items-center lg:hover:scale-105 hover:transition-all hover:duration-200">
         {title}
         {icon}
       </button>
