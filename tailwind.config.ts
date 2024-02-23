@@ -17,6 +17,7 @@ const config: Config = {
     colors: {
       primary: "#FF705D",
       secondary: "#231E2E",
+      bgApp: "#fdfaf6",
       lightText: "#FFFFFF",
       darkText: "#231E2E",
       bgCard: "#f8fafc",

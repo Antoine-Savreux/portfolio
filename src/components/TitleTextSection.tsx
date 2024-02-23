@@ -10,7 +10,7 @@ export default function TitleTextSection({
       <h1 className="text-5xl lg:text-6xl 2xl:text-7xl 2xl:text-nowrap font-bold text-secondary">
         {title}
       </h1>
-      <p className="text-justify font-normal text-secondary 2xl:mx-12">
+      <p className="text-justify font-normal lg:text-lg text-secondary 2xl:mx-12">
         {text}
       </p>
     </section>
