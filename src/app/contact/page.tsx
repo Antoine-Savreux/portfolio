@@ -23,6 +23,7 @@ export default function ContactPage() {
 
   useEffect(() => {
     formValidation();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [name, email, message]);
 
   const handleSubmit = async (e: any) => {
