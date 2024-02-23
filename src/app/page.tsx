@@ -25,8 +25,8 @@ export default function HomePage() {
         <DownloadButton
           text="Télécharger mon CV"
           type="download"
-          filePath="/images/forum.jpg"
-          fileName="forum.jpg"
+          filePath="/images/cvantoinesavreux.pdf"
+          fileName="antoinesavreux.pdf"
         />
       </div>
       {/* Section a propos */}
