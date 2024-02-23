@@ -9,7 +9,7 @@ import DownloadButton from "@/components/DownloadButton";
 
 export default function HomePage() {
   return (
-    <div className="min-h-full flex flex-col items-center p-4 space-y-8 xl:mx-40 2xl:mx-96 2xl:space-y-16">
+    <main className="min-h-full flex flex-col items-center p-4 space-y-8 xl:mx-40 2xl:mx-96 2xl:space-y-16">
       {/* Important */}
       <ImportantText text="Développeur web" />
       {/* Titre */}
@@ -30,14 +30,16 @@ export default function HomePage() {
         />
       </div>
       {/* Section a propos */}
-      <Title title="A propos" />
-      <About />
+      <section className="flex flex-col space-y-8 items-center lg:gap-6">
+        <Title title="A propos" />
+        <About />
+      </section>
       {/* Titre */}
       <Title title="Mes projets" />
       {/* Texte intro + bouton */}
       <IntroTextButton text="Les projets sur lesquels j'ai pu travailler :" />
       {/* Caroussel de cards projets */}
       <Carousel />
-    </div>
+    </main>
   );
 }

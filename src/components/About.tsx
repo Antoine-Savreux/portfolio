@@ -104,8 +104,8 @@ export default function About() {
   };
 
   return (
-    <section>
-      <div className="flex flex-col space-y-4">
+    <section className="space-y-4">
+      <div className="flex flex-col gap-4 lg:flex-row lg:border-2 lg:border-borderCard lg:rounded-full lg:space-x-12">
         <button
           id="1"
           onClick={onClickButton}
@@ -139,44 +139,47 @@ export default function About() {
         >
           Skills
         </button>
-        <div>
-          {isClicked == 1 &&
-            personalInfoData.map((item, index) => (
-              <div
-                className="flex justify-center space-x-2 space-y-4 items-baseline"
-                key={index}
-              >
-                {item.icon}
-                <span className="text-secondary">{item.text}</span>
-              </div>
-            ))}
-          {isClicked == 2 &&
-            qualificationData.map((item, index) => (
-              <div className="space-x-2" key={index}>
-                <p className="text-secondary">
-                  {item.name}
-                  <span className="font-medium text-primary"> | </span>
-                  <strong className="text-secondary">{item.school}</strong>
-                </p>
-              </div>
-            ))}
-          {isClicked == 3 &&
-            skillData.map((item, index) => (
-              <div
-                className="flex space-x-2 space-y-4 justify-center items-baseline"
-                key={index}
-              >
-                <Image
-                  className="text-primary"
-                  width={20}
-                  height={20}
-                  src={item.icon}
-                  alt={`${item.name} logo`}
-                />
-                <p>{item.name}</p>
-              </div>
-            ))}
-        </div>
+      </div>
+      <div>
+        {isClicked == 1 &&
+          personalInfoData.map((item, index) => (
+            <div
+              className="flex justify-center space-x-2 space-y-4 items-baseline"
+              key={index}
+            >
+              {item.icon}
+              <span className="text-secondary">{item.text}</span>
+            </div>
+          ))}
+        {isClicked == 2 &&
+          qualificationData.map((item, index) => (
+            <div
+              className="flex justify-center space-x-2 lg:flex lg:justify-center"
+              key={index}
+            >
+              <p className="text-secondary">
+                {item.name}
+                <span className="font-medium text-primary"> | </span>
+                <strong className="text-secondary">{item.school}</strong>
+              </p>
+            </div>
+          ))}
+        {isClicked == 3 &&
+          skillData.map((item, index) => (
+            <div
+              className="flex space-x-2 space-y-4 justify-center items-baseline"
+              key={index}
+            >
+              <Image
+                className="text-primary"
+                width={20}
+                height={20}
+                src={item.icon}
+                alt={`${item.name} logo`}
+              />
+              <p>{item.name}</p>
+            </div>
+          ))}
       </div>
     </section>
   );
