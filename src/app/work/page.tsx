@@ -11,15 +11,19 @@ export default function WorkPage() {
         Retrouvez les différents projets sur lesquels je travaille ou j&apos;ai
         pu travaillé :
       </p>
-      <section className="flex flex-col items-center space-y-4">
+      <section className="flex flex-col items-center space-y-4 xl:grid xl:grid-cols-2 xl:space-y-0 gap-6">
         {projectData.map((project) => (
-          <ProjectCard
+          <div
+            className="lg:hover:scale-105 hover:transition-all hover:duration-200"
             key={project.id}
-            image={project.image}
-            name={project.name}
-            description={project.description}
-            url={project.url}
-          />
+          >
+            <ProjectCard
+              image={project.image}
+              name={project.name}
+              description={project.description}
+              url={project.url}
+            />
+          </div>
         ))}
       </section>
       <ButtonWithLink title="Collaborer !" href="/contact" type="contact" />
