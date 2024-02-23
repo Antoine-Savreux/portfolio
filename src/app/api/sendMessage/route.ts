@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: any, res: NextResponse) {
   try {
     const buffers = [];
     for await (const chunk of req.body) {
