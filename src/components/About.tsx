@@ -133,7 +133,7 @@ export default function About() {
           onClick={onClickButton}
           className={
             isClicked == 3
-              ? "bg-primary px-6 py-3 text-xl font-semibold text-lightText rounded-full transition-all"
+              ? "bg-primary px-6 py-3 text-xl font-semibold text-lightText rounded-full"
               : "bg-white px-6 py-3 text-xl font-semibold text-darkText rounded-full"
           }
         >
@@ -154,7 +154,7 @@ export default function About() {
         {isClicked == 2 &&
           qualificationData.map((item, index) => (
             <div
-              className="flex justify-center space-x-2 lg:flex lg:justify-center"
+              className="flex justify-center space-x-2 lg:space-y-5 lg:flex lg:justify-center"
               key={index}
             >
               <p className="text-secondary">

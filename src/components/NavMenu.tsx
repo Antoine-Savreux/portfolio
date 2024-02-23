@@ -68,7 +68,7 @@ export default function NavMenu() {
         {NAVLINKS.map((link) => (
           <li key={link.link}>
             <Link
-              className="text-secondary text-2xl font-semibold lg:text-3xl lg:font-medium lg:hover:text-primary"
+              className="text-secondary text-2xl lg:text-3xl lg:font-normal lg:hover:text-primary lg:hover:underline lg:hover:underline-offset-8"
               href={link.link}
               onClick={() => setIsOpen(false)}
             >
